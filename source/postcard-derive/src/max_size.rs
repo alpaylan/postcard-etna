@@ -45,7 +45,7 @@ fn max_size_sum(data: &Data, span: Span) -> Result<TokenStream, syn::Error> {
         Data::Enum(data) => {
             let variant_count = data.variants.len();
 
-            let recurse = data.variants.iter().map(|v| sum_fields(&v.fields)).filter_map(|v| v);
+            let recurse = data.variants.iter().filter_map(|v| sum_fields(&v.fields));
 
             let discriminant_size = varint_size_discriminant(variant_count as u32) as usize;
 
