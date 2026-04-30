@@ -1,6 +1,7 @@
 name = "postcard"
 description = "A no_std + serde compatible message library for Rust — ETNA workload."
 language = "rust"
+strategies = ["proptest", "quickcheck", "crabcheck", "hegel"]
 crate = "postcard"
 base_commit = "de182557cff45f2ca9b2b67a6b93be5917612a44"
 
