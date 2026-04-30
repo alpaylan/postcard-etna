@@ -12,4 +12,5 @@ members = [
     "source/postcard2",
     "source/postcard2-eio",
     "source/postcard2-heapless",
+    "source/etna_runner",
 ]

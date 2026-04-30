@@ -1,0 +1,11 @@
+--- a/source/postcard/src/accumulator.rs
++++ b/source/postcard/src/accumulator.rs
+@@ -137,7 +137,7 @@ impl<const N: usize> CobsAccumulator<N> {
+             let (take, release) = input.split_at(n + 1);
+
+             // Does it fit?
+-            if (self.idx + take.len()) <= N {
++            if (self.idx + n) <= N {
+                 // Aw yiss - add to array
+                 self.extend_unchecked(take);
+

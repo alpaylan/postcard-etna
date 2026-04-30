@@ -1,0 +1,32 @@
+{"ts": "2026-04-30T05:54:21Z", "stage": "discover", "event": "start"}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "70ea33a", "subject": "Fix deserialization of i128", "files": 2, "hunks": 2}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "2a300b9", "subject": "Fix off-by-one in varint size calculation (#111)", "files": 1, "hunks": 1}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "41c2ddb", "subject": "fix: cobs accumulator OOB index when data is 1 byte too long (#90)", "files": 1, "hunks": 1}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "2a62f8c", "subject": "Fix tuple struct deserialization bug", "files": 1, "hunks": 1}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "58b3047", "subject": "Add missing size prefix for serialize_bytes (#22)", "files": 4, "hunks": 3}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "f31d226", "subject": "Fix bug when capacity of heapless::Vec or String is zero", "files": 1, "hunks": 1}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "c160626", "subject": "Add max size edge case tests and fix bug", "files": 1, "hunks": 1}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "77fd54b", "subject": "Potential fix for collect_str bug", "files": 2, "hunks": 2}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "7c172cc", "subject": "Fix a few bugs (postcard-schema map / enum disc max_size)", "files": 2, "hunks": 2}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "67f9195", "subject": "Fix EOF not being handled correctly", "files": 1, "hunks": 2}
+{"ts": "2026-04-30T05:57:42Z", "stage": "discover", "event": "candidate", "hash": "6338601", "subject": "Fix Vec pre-alloc panic (#136)", "files": 3, "hunks": 4}
+{"ts": "2026-04-30T05:57:48Z", "stage": "discover", "event": "done", "commits_scanned": 420, "fix_commits": 11}
+{"ts": "2026-04-30T05:57:59Z", "stage": "atomize", "event": "start", "total_candidates": 11}
+{"ts": "2026-04-30T06:16:12Z", "stage": "atomize", "event": "variant_committed", "name": "i128_deserialization_70ea33a_1", "injection": "patch"}
+{"ts": "2026-04-30T06:16:12Z", "stage": "atomize", "event": "variant_committed", "name": "cobs_acc_oob_41c2ddb_1", "injection": "patch"}
+{"ts": "2026-04-30T06:16:12Z", "stage": "atomize", "event": "variant_committed", "name": "tuple_struct_deserialize_2a62f8c_1", "injection": "patch"}
+{"ts": "2026-04-30T06:16:12Z", "stage": "atomize", "event": "variant_committed", "name": "serialize_bytes_size_prefix_58b3047_1", "injection": "patch"}
+{"ts": "2026-04-30T06:16:12Z", "stage": "atomize", "event": "variant_committed", "name": "max_size_varint_zero_f31d226_1", "injection": "patch"}
+{"ts": "2026-04-30T06:16:12Z", "stage": "atomize", "event": "variant_committed", "name": "max_size_varint_off_by_one_c160626_1", "injection": "patch"}
+{"ts": "2026-04-30T06:16:12Z", "stage": "atomize", "event": "variant_committed", "name": "collect_str_unreachable_77fd54b_1", "injection": "patch"}
+{"ts": "2026-04-30T06:16:12Z", "stage": "atomize", "event": "done", "committed": 7, "skipped": 5}
+{"ts": "2026-04-30T06:16:26Z", "stage": "runner", "event": "start"}
+{"ts": "2026-04-30T06:16:26Z", "stage": "runner", "event": "done"}
+{"ts": "2026-04-30T06:16:31Z", "stage": "document", "event": "start"}
+{"ts": "2026-04-30T06:16:32Z", "stage": "document", "event": "done"}
+{"ts": "2026-04-30T06:16:36Z", "stage": "validate", "event": "start"}
+{"ts": "2026-04-30T06:16:43Z", "stage": "validate", "event": "check_passed", "check": "A. etna workload check"}
+{"ts": "2026-04-30T06:16:44Z", "stage": "validate", "event": "check_passed", "check": "B1. base builds and tests"}
+{"ts": "2026-04-30T06:17:27Z", "stage": "validate", "event": "check_passed", "check": "B2. per-variant detection"}
+{"ts": "2026-04-30T06:17:44Z", "stage": "validate", "event": "check_passed", "check": "B3. etna binary end-to-end"}
+{"ts": "2026-04-30T06:18:00Z", "stage": "validate", "event": "all_checks_passed"}

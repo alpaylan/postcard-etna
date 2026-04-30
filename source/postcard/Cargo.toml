@@ -47,6 +47,7 @@ optional = true
 [dependencies.serde]
 version = "1.0.100"
 default-features = false
+features = ["derive"]
 
 [dependencies.cobs]
 version = "0.3.0"

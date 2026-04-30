@@ -1,0 +1,18 @@
+[package]
+name = "etna_runner"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "etna"
+path = "src/bin/etna.rs"
+
+[dependencies]
+postcard = { path = "../postcard", features = ["use-std", "alloc", "experimental-derive", "heapless"] }
+serde = { version = "1.0.100", features = ["derive"] }
+heapless = { version = "0.7.0", features = ["serde"] }
+proptest = "1.0"
+quickcheck = { path = "/Users/akeles/Programming/projects/PbtBenchmark/quickcheck-rs", features = ["etna"] }
+crabcheck = { path = "/Users/akeles/Programming/projects/PbtBenchmark/crabcheck" }
+hegeltest = "0.3.7"

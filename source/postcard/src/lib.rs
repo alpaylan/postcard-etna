@@ -21,6 +21,10 @@ mod varint;
 #[cfg(feature = "experimental-derive")]
 pub(crate) mod max_size;
 
+#[cfg(any(feature = "use-std", feature = "alloc"))]
+pub mod etna;
+
+
 /// # Experimental Postcard Features
 ///
 /// Items inside this module require various feature flags, and are not

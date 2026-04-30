@@ -1,0 +1,11 @@
+--- a/source/postcard/src/ser/serializer.rs
++++ b/source/postcard/src/ser/serializer.rs
+@@ -192,8 +192,6 @@ where
+
+     #[inline]
+     fn serialize_bytes(self, v: &[u8]) -> Result<()> {
+-        self.try_push_varint_usize(v.len())
+-            .map_err(|_| Error::SerializeBufferFull)?;
+         self.output
+             .try_extend(v)
+             .map_err(|_| Error::SerializeBufferFull)
