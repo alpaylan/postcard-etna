@@ -13,6 +13,6 @@ postcard = { path = "../postcard", features = ["use-std", "alloc", "experimental
 serde = { version = "1.0.100", features = ["derive"] }
 heapless = { version = "0.7.0", features = ["serde"] }
 proptest = "1.0"
-quickcheck = { path = "/Users/akeles/Programming/projects/PbtBenchmark/quickcheck-rs", features = ["etna"] }
-crabcheck = { path = "/Users/akeles/Programming/projects/PbtBenchmark/crabcheck" }
+quickcheck = { git = "https://github.com/alpaylan/quickcheck.git", branch = "master", features = ["etna"] }
+crabcheck = { git = "https://github.com/alpaylan/crabcheck.git", branch = "main" }
 hegeltest = "0.3.7"
