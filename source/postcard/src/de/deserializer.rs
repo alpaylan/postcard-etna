@@ -273,8 +273,9 @@ impl<'de, F: Flavor<'de>> de::Deserializer<'de> for &mut Deserializer<'de, F> {
     where
         V: Visitor<'de>,
     {
-        let v = self.try_take_varint_u128()?;
-        visitor.visit_i128(de_zig_zag_i128(v))
+        let mut buf = [0u8; 16];
+        buf[..].copy_from_slice(self.flavor.try_take_n(16)?);
+        visitor.visit_i128(i128::from_le_bytes(buf))
     }
 
     #[inline]
